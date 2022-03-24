@@ -1,5 +1,6 @@
 // создаем HTTP-сервер
 
+const { connected } = require('process')
 const { Socket } = require('socket.io')
 
 //подключаем к серверу socket.IO
@@ -11,12 +12,23 @@ const io = require('socket.io')(server, {
 })
 const log = console.log
 
+const registrMessengeHandlers = require('./handlers/messangeHandlers')
+const registrUserHandlers = require('./handlers/userHandlers')
 //получаем обработчика событий
 
 //данная функция выполняется при подключении каждого сокета
 // обычно, один клиент = один сокет
 
 const onConnection = (Socket) => {
+
+    //Выводим сообщение о подключении пользователя
+    log ('user connected')
+
+
+    socket.on('disconnect', ()=>{
+        //выводим сообщение
+        log (`'User disconnected`)
+    })
 
 }
 
