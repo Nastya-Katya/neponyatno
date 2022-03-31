@@ -19,11 +19,13 @@ const registrUserHandlers = require('./handlers/userHandlers')
 //данная функция выполняется при подключении каждого сокета
 // обычно, один клиент = один сокет
 
-const onConnection = (Socket) => {
+const onConnection = (socket) => {
 
     //Выводим сообщение о подключении пользователя
     log ('user connected')
 
+    registrMessengeHandlers(io, socket)
+    registrUserHandlers(io, socket)
 
     socket.on('disconnect', ()=>{
         //выводим сообщение

@@ -1,6 +1,6 @@
-const {nanoid} = reqvire ('nanoid')
+const {nanoid} = require ('nanoid')
 
-const low = require('lowbd')
+const low = require('lowdb')
 const FileSync = require('lowdb/adapters/FileSync')
 
 const adapter = new FileSync('db/messenges.json')
@@ -34,18 +34,19 @@ db.defaults({
 }).write()
 
 module.exports = (io,socket) => {
-    const getMesseges = () => {
-        const messages = b.get('messages').value()
-        io.emit('messanges', messages)
+    const getMessages = () => {
+        const messages = db.get('mesenges').value()
+        console.log(messages)
+        io.emit('messages', messages)
 
     }
 
     const addMessages = (messsage) => {
-        db.get('messages')
+        db.get('mesenges')
         .push({
-          messageId: nanoid(8),
-creaded: new Data(),
-...message
+            messageId: nanoid(8),
+            createdAt: new Date(),
+            ...messsage
         })
 .write()
 getMessages()
@@ -53,6 +54,6 @@ getMessages()
 
     }
     socket.on('message:get', getMessages)
-    socket.on('message:add', getMessage)
+    socket.on('message:add', addMessages)
 }
 

@@ -1,0 +1,48 @@
+{
+  "mesenges": [
+    {
+      "mesageid": "1",
+      "userid": "1",
+      "sanderName": "Bob",
+      "messageText": "Привет, Вася!",
+      "createdAt": "2021-01-14",
+      "avatar": "https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg"
+    },
+    {
+      "mesageid": "2",
+      "userid": "2",
+      "sanderName": "Vasya",
+      "messageText": "Привет, Боб!",
+      "createdAt": "2021-01-14",
+      "avatar": "https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg"
+    },
+    {
+      "messageId": "xmjL1yH0",
+      "createdAt": "2022-03-31T15:43:46.657Z",
+      "userId": 341771337,
+      "messageText": "jjj",
+      "senderName": "Марина Кузьминых"
+    },
+    {
+      "messageId": "WkO-vj5w",
+      "createdAt": "2022-03-31T15:43:52.020Z",
+      "userId": 341771337,
+      "messageText": "5454",
+      "senderName": "Марина Кузьминых"
+    },
+    {
+      "messageId": "cY3aBJJs",
+      "createdAt": "2022-03-31T16:01:46.988Z",
+      "userId": 341771337,
+      "messageText": "bn",
+      "senderName": "Марина Кузьминых"
+    },
+    {
+      "messageId": "Rv0wpiNk",
+      "createdAt": "2022-03-31T16:01:57.884Z",
+      "userId": 341771337,
+      "messageText": ";",
+      "senderName": "Марина Кузьминых"
+    }
+  ]
+}
